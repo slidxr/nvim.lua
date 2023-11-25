@@ -4,10 +4,17 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		'tsserver',
-		'rust_analyzer'
+		'rust_analyzer',
+        'gopls',
+        'tailwindcss',
+
 	},
-		handlers = {
-			lsp.default_setup,},
+    handlers = {
+        lsp.default_setup,},
+        lua_ls = function()
+            local lua_opts = lsp_zero.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end,
 		})
 
 lsp.preset('recommended')
