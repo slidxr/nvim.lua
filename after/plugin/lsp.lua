@@ -7,7 +7,7 @@ require('mason-lspconfig').setup({
 		'rust_analyzer',
         'gopls',
         'tailwindcss',
-
+        'html'
 	},
     handlers = {
         lsp.default_setup,},
