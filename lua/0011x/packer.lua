@@ -44,4 +44,13 @@ use {
         {'L3MON4D3/LuaSnip'},
     }
 }
+use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
 end)
